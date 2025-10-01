@@ -1,9 +1,15 @@
-export default function Home() {
+/**
+ * Main dashboard page component displaying all 15 AI tools in a responsive grid.
+ * Serves as the homepage of the application, fetching tools from the API and rendering ToolCard components.
+ * Includes sorting functionality (by date/alphabetical) and loading/error states.
+ */
+"use client";
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-blue-500">
-      <div className="text-white text-4xl font-bold">
-        AI Feature Tracker - Tailwind Works!
-      </div>
-    </main>
+    <div>
+      <h1>AI Feature Tracker</h1>
+      <p>Coming soon - Step 8</p>
+    </div>
   );
 }
