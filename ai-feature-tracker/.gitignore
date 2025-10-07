@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*.local
 
+# Supabase - Note: config.toml is safe to commit (contains no secrets)
+# Only ignore if you have local modifications you don't want to commit
+# supabase/config.toml
+
 # vercel
 .vercel
 
