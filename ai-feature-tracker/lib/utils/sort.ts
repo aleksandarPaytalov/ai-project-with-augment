@@ -5,7 +5,11 @@
  */
 
 // Placeholder type - will be properly defined in Step 4
-type Tool = any;
+type Tool = {
+  id: string;
+  name: string;
+  [key: string]: unknown;
+};
 
 /**
  * Sorts tools by latest feature update date (newest first)
