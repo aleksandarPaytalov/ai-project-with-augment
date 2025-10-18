@@ -223,7 +223,7 @@ export function isApiError(response: unknown): response is ApiErrorResponse {
  */
 export function hasLatestFeature(
   tool: ToolWithLatestFeature
-): tool is RequireFields<ToolWithLatestFeature, "latestFeature"> {
+): tool is ToolWithLatestFeature & { latestFeature: FeatureUpdate } {
   return tool.latestFeature !== null;
 }
 

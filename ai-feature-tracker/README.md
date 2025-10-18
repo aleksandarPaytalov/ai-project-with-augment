@@ -115,6 +115,62 @@ TypeScript type definitions for the entire application.
 
 Static assets served directly. Contains logo images for all 15 AI tools.
 
+## TypeScript Types System
+
+The project uses a comprehensive TypeScript type system for type safety and better developer experience.
+
+### Type Files
+
+- **`types/supabase.ts`**: Auto-generated types from Supabase database schema
+
+  - Generated using: `npm run types:generate`
+  - Never edit this file manually
+  - Regenerate after database schema changes
+
+- **`types/index.ts`**: Application-level types
+  - Clean, easy-to-use types for components and business logic
+  - Includes composite types for joined data
+  - Type guards for runtime type checking
+
+### Key Types
+
+```typescript
+import {
+  Tool, // AI tool from database
+  FeatureUpdate, // Feature announcement
+  ToolWithLatestFeature, // Tool + latest feature (for dashboard)
+  SortOption, // 'date' | 'alphabetical'
+  ApiResponse, // Standard API response format
+} from "@/types";
+```
+
+### Type Generation
+
+Regenerate database types after schema changes:
+
+```bash
+
+# Generate types from remote Supabase database
+
+npm run types:generate
+
+# Or manually
+
+npx supabase gen types typescript --project-id your-project-id > types/supabase.ts
+```
+
+### Documentation
+
+- **Type Guide**: `docs/typescript-types-guide.md` - Comprehensive usage examples
+- **CLI Commands**: `docs/supabase-cli-commands.md` - Supabase CLI reference
+
+### Best Practices
+
+1. **Always use types** for function parameters and return values
+2. **Use type guards** (`isApiError`, `hasLatestFeature`) for runtime checks
+3. **Import from `@/types`** not from `types/supabase` directly
+4. **Regenerate types** after any database schema changes
+
 ## Development Workflow
 
 This project uses **Augment Code** with Manual rules for controlled, step-by-step development:

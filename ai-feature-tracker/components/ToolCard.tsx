@@ -4,14 +4,20 @@
  * Will be fully implemented in Step 7.
  */
 import React from "react";
+import { ToolWithLatestFeature } from "@/types";
 
 interface ToolCardProps {
-  // Props will be defined in Step 7 - using object for now to satisfy ESLint
-  [key: string]: unknown;
+  tool: ToolWithLatestFeature;
+  onToolClick?: (toolId: string) => void;
 }
 
-const ToolCard: React.FC<ToolCardProps> = () => {
-  return <div>{/* ToolCard - Step 7 */}</div>;
+const ToolCard: React.FC<ToolCardProps> = ({ tool, onToolClick }) => {
+  return (
+    <div>
+      {/* ToolCard - Step 7 */}
+      <p>Tool: {tool.name}</p>
+    </div>
+  );
 };
 
 export default ToolCard;

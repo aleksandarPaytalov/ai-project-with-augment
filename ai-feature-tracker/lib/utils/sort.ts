@@ -4,12 +4,7 @@
  * Will be fully implemented in Step 9 for sorting functionality.
  */
 
-// Placeholder type - will be properly defined in Step 4
-type Tool = {
-  id: string;
-  name: string;
-  [key: string]: unknown;
-};
+import { ToolWithLatestFeature } from "@/types";
 
 /**
  * Sorts tools by latest feature update date (newest first)
@@ -17,7 +12,9 @@ type Tool = {
  * @param tools - Array of tools to sort
  * @returns Sorted array with newest updates first
  */
-export const sortByDate = (tools: Tool[]): Tool[] => {
+export const sortByDate = (
+  tools: ToolWithLatestFeature[]
+): ToolWithLatestFeature[] => {
   // Placeholder - will be implemented in Step 9
   return tools;
 };
@@ -28,7 +25,9 @@ export const sortByDate = (tools: Tool[]): Tool[] => {
  * @param tools - Array of tools to sort
  * @returns Sorted array in alphabetical order
  */
-export const sortAlphabetically = (tools: Tool[]): Tool[] => {
+export const sortAlphabetically = (
+  tools: ToolWithLatestFeature[]
+): ToolWithLatestFeature[] => {
   // Placeholder - will be implemented in Step 9
   return tools;
 };
