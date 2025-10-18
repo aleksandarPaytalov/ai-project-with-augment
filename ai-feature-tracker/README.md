@@ -105,6 +105,12 @@ TypeScript type definitions for the entire application.
 - **`types/index.ts`**: Core application types (Tool, FeatureUpdate, etc.)
 - **`types/supabase.ts`**: Auto-generated types from Supabase schema
 
+> **⚠️ Important:** `types/supabase.ts` should **never be manually edited**. This file is auto-generated from your Supabase database schema. To regenerate it whenever the database schema changes, use:
+>
+> ```bash
+> npm run types:generate
+> ```
+
 ### `public/logos/`
 
 Static assets served directly. Contains logo images for all 15 AI tools.
